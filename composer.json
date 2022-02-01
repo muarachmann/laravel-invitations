@@ -1,0 +1,42 @@
+{
+    "name": "muarachmann/laravel-invitations",
+    "description": "Laravel invitations simplifying sending invitations",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mua Rachmann",
+            "email": "muarachmann@gmail.com",
+            "homepage": "https://github.com/muarachmann",
+            "role": "Maintainer"
+        }
+    ],
+    "homepage": "https://github.com/muarachmann/laravel-invitations",
+    "keywords": ["laravel", "invitations"],
+    "require": {
+        "illuminate/support": "~7|~8"
+    },
+    "require-dev": {
+        "orchestra/testbench": "~5|~6",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "MuaRachmann\\Invitations\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MuaRachmann\\Invitations\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MuaRachmann\\Invitations\\InvitationsServiceProvider"
+            ],
+            "aliases": {
+                "Invitations": "MuaRachmann\\Invitations\\Facades\\Invitation"
+            }
+        }
+    }
+}
