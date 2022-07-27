@@ -3,7 +3,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
 [![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
+[![CI](https://github.com/muarachmann/laravel-invitations/actions/workflows/run-tests.yml/badge.svg?branch=master)](https://github.com/muarachmann/laravel-invitations/actions/workflows/run-tests.yml)
 
 This is where your description should go. Take a look at [contributing.md](contributing.md) to see a to do list.
 
