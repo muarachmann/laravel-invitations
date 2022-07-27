@@ -1,6 +1,6 @@
 <?php
 
-namespace MuaRachmann\Invitations\Models;
+namespace MuaRachmann\Invitation\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;

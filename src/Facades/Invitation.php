@@ -1,14 +1,14 @@
 <?php
 
-namespace MuaRachmann\Invitations\Facades;
+namespace MuaRachmann\Invitation\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use MuaRachmann\Invitations\Contracts\CanBeInvited;
+use MuaRachmann\Invitation\Contracts\CanBeInvited;
 
 class Invitation extends Facade
 {
     /**
-     * @see \Muarachmann\Invitations\Invitation
+     * @see \Muarachmann\Invitation\Invitation
      *
      * @method static string sendInvitationLink(CanBeInvited $invitable)
      */

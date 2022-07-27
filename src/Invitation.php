@@ -1,20 +1,18 @@
 <?php
 
-namespace MuaRachmann\Invitations;
+namespace MuaRachmann\Invitation;
 
 use Carbon\Carbon;
-use MuaRachmann\Invitations\Contracts\CanBeInvited;
-use MuaRachmann\Invitations\Contracts\InvitationsInterface;
-use MuaRachmann\Invitations\Events\InvitationAccepted;
-use MuaRachmann\Invitations\Events\InvitationDeclined;
-use MuaRachmann\Invitations\Events\InvitationSent;
-use MuaRachmann\Invitations\Models\Invitation as InvitationModel;
+use MuaRachmann\Invitation\Contracts\CanBeInvited;
+use MuaRachmann\Invitation\Contracts\InvitationsInterface;
+use MuaRachmann\Invitation\Events\InvitationAccepted;
+use MuaRachmann\Invitation\Events\InvitationDeclined;
+use MuaRachmann\Invitation\Events\InvitationSent;
+use MuaRachmann\Invitation\Models\Invitation as InvitationModel;
 
 class Invitation implements InvitationsInterface
 {
-
     protected bool $dispatch_events = true;
-
 
     /**
      * When used, no events are being dispatched.
@@ -137,7 +135,7 @@ class Invitation implements InvitationsInterface
     }
 
     /**
-     * Extend an Invitation for another n days. now + n days!
+     * Extend an Invitation for another x $hours
      *
      * @param InvitationModel $invitation
      * @param int|null $hours

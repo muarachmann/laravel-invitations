@@ -1,6 +1,6 @@
 <?php
 
-namespace MuaRachmann\Invitations\Contracts;
+namespace MuaRachmann\Invitation\Contracts;
 
 interface CanBeInvited
 {

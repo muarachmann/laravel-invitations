@@ -1,9 +1,9 @@
 <?php
 
-namespace MuaRachmann\Invitations\Contracts;
+namespace MuaRachmann\Invitation\Contracts;
 
-use Muarachmann\Invitations\Invitation;
-use MuaRachmann\Invitations\Models\Invitation as InvitationModel;
+use Muarachmann\Invitation\Invitation;
+use MuaRachmann\Invitation\Models\Invitation as InvitationModel;
 
 interface InvitationsInterface
 {

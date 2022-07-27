@@ -17,6 +17,66 @@ $ composer require muarachmann/laravel-invitations
 
 ## Usage
 
+After installing the laravel Invite Codes package, register the service provider in your `config/app.php` file:
+
+> Optional in Laravel 5.5 or above
+
+```php
+'providers' => [
+    MuaRachmann\Invitations\InvitationServiceProvider::class,
+    MuaRachmann\Invitations\InvitationEventServiceProvider::class,
+];
+```
+
+### Configuring the package
+
+You can publish the config file with:
+This is the contents of the file that will be published at config/laravel-invitations.php:
+
+```bash
+php artisan vendor:publish --provider="MuaRachmann\Invitations\InvitationServiceProvider" --tag="laravel-invitations-config"
+```
+
+
+Run migrations required for this package. If you need to customize the tables, you can [configure them](#configuring-the-package) with:
+
+```bash
+php artisan vendor:publish --provider="MuaRachmann\Invitations\InvitationServiceProvider" --tag="laravel-invitations-migrations"
+```
+
+### Events
+
+***Laravel Invitations*** comes with several events [events](https://laravel.com/docs/master/events) by default
+
+*  MuaRachmann\Invitations\Events\InvitationAccepted
+*  MuaRachmann\Invitations\Events\InvitationDeclined
+*  MuaRachmann\Invitations\Events\InvitationExpired
+*  MuaRachmann\Invitations\Events\InvitationSent
+
+These events have the `invitation` model so you can listen to these events and take approriate actions e.g send welcome email.
+
+include listener in `EventServiceProvider.php`
+
+```php
+use MuaRachmann\Invitations\Events\InvitationAccepted;
+use App\Listeners\SendWelcomeEmail;
+
+protected $listen = [
+    InvitationAccepted::class => [
+        SendWelcomeEmail::class,
+    ],
+];
+```
+`SendWelcomeEmail.php`
+
+```php
+public function handle($invitation)
+{
+    // send welcome email to user
+}
+```
+
+
 ## Change log
 
 Please see the [changelog](changelog.md) for more information on what has changed recently.
@@ -55,5 +115,3 @@ MIT. Please see the [license file](license.md) for more information.
 [link-styleci]: https://styleci.io/repos/12345678
 [link-author]: https://github.com/muarachmann
 [link-contributors]: ../../contributors
-
-php artisan vendor:publish --provider="Muarachmann\Invitations\InvitationsServiceProvider" --tag="migrations"

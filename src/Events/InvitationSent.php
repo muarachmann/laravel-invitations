@@ -1,14 +1,15 @@
 <?php
 
-namespace MuaRachmann\Invitations\Events;
+namespace MuaRachmann\Invitation\Events;
 
+use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use MuaRachmann\Invitations\Models\Invitation;
+use MuaRachmann\Invitation\Models\Invitation;
 
 class InvitationSent
 {
-    use Dispatchable, SerializesModels;
+    use Dispatchable, InteractsWithSockets, SerializesModels;
 
     public Invitation $invitation;
 
