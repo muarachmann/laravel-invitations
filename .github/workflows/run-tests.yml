@@ -14,9 +14,9 @@ jobs:
         dependency-version: [prefer-stable]
         exclude:
           - php: 7.2
-            laravel: 9.*
+            laravel: [6.*, 7.*, 9.*]
           - php: 7.3
-            laravel: 9.*
+            laravel: [6.*, 7.*, 9.*]
           - php: 7.4
             laravel: 9.*
           - php: 7.2
