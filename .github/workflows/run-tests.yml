@@ -23,19 +23,10 @@ jobs:
             laravel: 8.*
           - php: 8.1
             laravel: 7.*
-        include:
-          - php: 8.0
-            laravel: 9.x
-            testbench: 7.*
-            dependency-version: prefer-stable
-          - laravel: 8.*
-            testbench: 6.*
-          - laravel: 7.*
-            testbench: 5.*
-          - laravel: 6.*
-            testbench: 4.*
+          - php: 8.1
+            laravel: 6.*
 
-    name: PHP ${{ matrix.php }}  - Laravel ${{ matrix.laravel }} - Testbench ${{ matrix.testbench }} (${{ matrix.dependency-version }})
+    name: PHP ${{ matrix.php }} - Laravel ${{ matrix.laravel }} / (${{ matrix.dependency-version }})
 
     steps:
 
