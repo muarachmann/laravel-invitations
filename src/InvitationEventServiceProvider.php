@@ -10,7 +10,7 @@ use MuaRachmann\Invitation\Events\InvitationExpired;
 
 class InvitationEventServiceProvider extends ServiceProvider
 {
-    public array $listen = [
+    public $listen = [
         InvitationAccepted::class => [],
         InvitationDeclined::class => [],
         InvitationSent::class => [],
