@@ -9,7 +9,6 @@ class Invitation extends Facade
 {
     /**
      * @see \Muarachmann\Invitation\Invitation
-     *
      * @method static string sendInvitationLink(CanBeInvited $invitable)
      */
     protected static function getFacadeAccessor(): string

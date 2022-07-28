@@ -2,7 +2,7 @@
 
 return [
 
-    'invitation_model' => MuaRachmann\Invitations\Models\Invitation::class,
+    'invitation_model' => MuaRachmann\Invitation\Models\Invitation::class,
 
     /*
     |--------------------------------------------------------------------------

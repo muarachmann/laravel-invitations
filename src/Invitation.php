@@ -25,7 +25,6 @@ class Invitation implements InvitationsInterface
         return $this;
     }
 
-
     /**
      * Create invitation with given data.
      * @param CanBeInvited $invitee
