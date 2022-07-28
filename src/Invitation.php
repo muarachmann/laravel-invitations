@@ -12,7 +12,7 @@ use MuaRachmann\Invitation\Models\Invitation as InvitationModel;
 
 class Invitation implements InvitationsInterface
 {
-    protected bool $dispatch_events = true;
+    protected $dispatch_events = true;
 
     /**
      * When used, no events are being dispatched.
